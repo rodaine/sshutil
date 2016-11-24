@@ -6,6 +6,7 @@ set -e
 which glide && exit 0
 
 echo "Installing Glide..."
+mkdir -p $GOPATH/bin
 curl https://glide.sh/get | sh
 which glide && exit 0
 

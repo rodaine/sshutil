@@ -6,4 +6,3 @@ $(dirname "$0")/require-glide
 glide install
 
 go get -u github.com/alecthomas/gometalinter
-gometalinter --install

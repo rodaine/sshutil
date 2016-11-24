@@ -1,0 +1,10 @@
+sudo:     false
+language: go
+go:       1.7.3
+
+install: ./script/bootstrap
+script:  ./script/cover
+
+branches:
+  only:
+    - master

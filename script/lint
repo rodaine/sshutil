@@ -3,6 +3,7 @@
 set -e
 
 gometalinter \
+  --install --update \
   --vendor \
   --disable=gotype \
   --disable=errcheck \
