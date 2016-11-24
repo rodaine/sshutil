@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# runs tests and generate coverage report
+set -e
+
+go test --coverprofile cover.out --race $(glide nv)
+go tool cover -html cover.out

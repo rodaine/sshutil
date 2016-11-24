@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# runs lints
+set -e
+
+gometalinter \
+  --vendor \
+  --disable=gotype \
+  --disable=errcheck \
+  --enable=goimports \
+  --enable=lll --line-length=120 \
+  --enable=misspell \
+  ./...

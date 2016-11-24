@@ -1,0 +1,9 @@
+package: github.com/rodaine/sshutil
+import:
+- package: golang.org/x/crypto
+  subpackages:
+  - ssh
+testImport:
+- package: github.com/stretchr/testify
+  subpackages:
+  - assert

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# boots up a godoc server and navigates to it
+set -e
+
+host="localhost:6161"
+pkg="github.com/rodaine/sshutil"
+
+godoc --http=${host} &
+pid=$!
+
+function ctrl_c() {
+  kill ${pid}
+}
+
+trap ctrl_c INT
+
+echo "Booting server..."
+
+sleep 3 # due to backgrounding
+open http://${host}/pkg/${pkg}
+
+echo "GoDoc server started at ${host}, docs live updating"
+echo "ctrl + C to quit"
+
+sleep infinity
+
+

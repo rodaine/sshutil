@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# runs tests, no coverage or race-detection is performed
+set -e
+
+go test -v $(glide nv)

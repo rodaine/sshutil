@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# ensures glide is installed
+set -e
+
+# already installed?
+which glide && exit 0
+
+echo "Installing Glide..."
+curl https://glide.sh/get | sh
+which glide && exit 0
+
+echo "Glide was not installed"
+exit 1
