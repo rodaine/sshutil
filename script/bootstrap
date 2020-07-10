@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# installs all dependencies, including those used for development
-set -e
-
-$(dirname "$0")/require-glide
-glide install
-
-go get -u github.com/alecthomas/gometalinter
